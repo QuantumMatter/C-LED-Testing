@@ -18,6 +18,9 @@ simple_cpp : simple_cpp.o $(RGB_LIBRARY)
 github_simple : github_simple.o $(RGB_LIBRARY)
 	$(CXX) $(CXXFLAGS) github_simple.o -o $@ $(LDFLAGS)
 
+server_test_cpp: server_test_cpp.o Server.o $(RGB_LIBRARY)
+	$(CXX) $(CXXFLAGS) server_test_cpp.o Server.o -o $@ $(LDFLAGS)
+
 clean:
 	rm -rf *.o
 
